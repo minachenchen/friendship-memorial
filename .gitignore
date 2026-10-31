@@ -1,0 +1,8 @@
+# 仅推送可部署的静态站点，排除项目内部文档/测试/工具
+docs/
+tests/
+tools/
+*.log
+.workbuddy/
+node_modules/
+README.md
