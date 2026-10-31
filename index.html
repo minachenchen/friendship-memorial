@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="light">
+<title>我们能做多久的好朋友？——一场关于友情、相遇、距离与未来的计算</title>
+<meta name="description" content="一份由孙浩轩送给张应钰的友情纪念：十个章节、二十个问题、三种未来、一封原话，和一张可以存很多年的纪念卡。">
+<meta name="theme-color" content="#FBF7F1">
+<meta property="og:type" content="website">
+<meta property="og:title" content="我们能做多久的好朋友？">
+<meta property="og:description" content="一场关于友情、相遇、距离与未来的计算。">
+<meta name="twitter:card" content="summary">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23FBF7F1'/%3E%3Cpath d='M16 6.5l2.1 7.4L25.5 16l-7.4 2.1L16 25.5l-2.1-7.4L6.5 16l7.4-2.1z' fill='%23B96A76'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="./assets/css/app.css">
+</head>
+<body data-view="home">
+
+<div class="atmos" aria-hidden="true">
+  <span class="atmos-glow atmos-glow--a"></span>
+  <span class="atmos-glow atmos-glow--b"></span>
+  <span class="atmos-glow atmos-glow--c"></span>
+</div>
+<div class="grain" aria-hidden="true"></div>
+
+<div class="intro" id="intro" hidden>
+  <div class="intro-inner">
+    <p class="intro-line">有些人原本只是生命里的陌生人，<br>后来却成了想认真珍惜的人。</p>
+    <span class="intro-rule" aria-hidden="true"></span>
+    <p class="intro-sign">写给我们认识的第三个月</p>
+  </div>
+  <button class="intro-skip" id="intro-skip" type="button">跳过</button>
+</div>
+
+<header class="site-head">
+  <a class="brand" href="#/home" aria-label="回到首页">
+    <span class="brand-mark" aria-hidden="true">✦</span>
+    <span class="brand-text">我们能做多久的好朋友</span>
+    <span class="brand-short" aria-hidden="true">好朋友</span>
+  </a>
+  <nav class="steps" aria-label="体验流程">
+    <a href="#/home" data-step="home"><i>01</i><span>首页</span></a>
+    <a href="#/story" data-step="story"><i>02</i><span>故事</span></a>
+    <a href="#/test" data-step="test"><i>03</i><span>测试</span></a>
+    <a href="#/result" data-step="result"><i>04</i><span>结果</span></a>
+    <a href="#/futures" data-step="futures"><i>05</i><span>未来</span></a>
+    <a href="#/letter" data-step="letter"><i>06</i><span>寄语</span></a>
+    <a href="#/card" data-step="card"><i>07</i><span>纪念卡</span></a>
+  </nav>
+</header>
+
+<main id="main">
+
+  <div class="storage-warn" id="storage-warn" role="status" hidden>
+    这个浏览器不允许保存本地数据（可能是隐私模式），答案只在本次打开期间有效。
+  </div>
+
+  <!-- ==================== 首页 ==================== -->
+  <section class="view is-static" id="view-home" data-view="home">
+    <div class="home-hero">
+      <div class="home-lead">
+        <p class="eyebrow">孙浩轩 给 张应钰 · 认识的第 3 个月</p>
+        <h1 class="home-title">我们能做多久的<span class="mark">好朋友</span>？</h1>
+        <p class="home-sub">一场关于友情、相遇、距离与未来的计算。</p>
+        <p class="home-desc">我们认识才三个月，原本是两个不同城市、毫无交集的人。以后也许会各自回到自己的生活里。在那之前，我想把此刻的心意，认真地做成一件事。</p>
+        <div class="home-actions">
+          <button class="btn btn--primary" type="button" data-go="story/1">从第一章开始</button>
+          <button class="btn btn--ghost" type="button" data-go="test" id="start-btn">直接做测试</button>
+        </div>
+        <p class="home-meta">10 个章节 · 20 个问题 · 约 6 分钟，可以随时停</p>
+        <p class="home-resume" id="home-resume" hidden></p>
+        <p class="home-jump"><button class="link-btn" type="button" data-go="letter">先读那封信 →</button></p>
+      </div>
+
+      <div class="home-art" aria-hidden="true">
+        <svg viewBox="0 0 420 420" class="constellation" role="presentation">
+          <defs>
+            <linearGradient id="arcGrad" x1="0" y1="1" x2="1" y2="0">
+              <stop offset="0%" stop-color="#B96A76" stop-opacity=".72"/>
+              <stop offset="55%" stop-color="#B08D4F" stop-opacity=".45"/>
+              <stop offset="100%" stop-color="#8C82B4" stop-opacity=".58"/>
+            </linearGradient>
+            <radialGradient id="haloA" cx="50%" cy="50%" r="50%">
+              <stop offset="0%" stop-color="#DFA6B0" stop-opacity=".44"/>
+              <stop offset="100%" stop-color="#DFA6B0" stop-opacity="0"/>
+            </radialGradient>
+            <radialGradient id="haloB" cx="50%" cy="50%" r="50%">
+              <stop offset="0%" stop-color="#A79BC6" stop-opacity=".40"/>
+              <stop offset="100%" stop-color="#A79BC6" stop-opacity="0"/>
+            </radialGradient>
+            <radialGradient id="haloC" cx="50%" cy="50%" r="50%">
+              <stop offset="0%" stop-color="#C0A062" stop-opacity=".30"/>
+              <stop offset="100%" stop-color="#C0A062" stop-opacity="0"/>
+            </radialGradient>
+          </defs>
+          <circle cx="96" cy="330" r="96" fill="url(#haloA)"/>
+          <circle cx="322" cy="104" r="104" fill="url(#haloB)"/>
+          <circle cx="209" cy="209" r="58" fill="url(#haloC)"/>
+          <path d="M96 330 C 150 210, 250 210, 322 104" fill="none" stroke="url(#arcGrad)" stroke-width="1.5" stroke-linecap="round" stroke-dasharray="2 9"/>
+          <circle cx="96" cy="330" r="5.2" fill="#B96A76"/>
+          <circle cx="96" cy="330" r="15" fill="none" stroke="#B96A76" stroke-opacity=".34"/>
+          <circle cx="322" cy="104" r="5.2" fill="#8C82B4"/>
+          <circle cx="322" cy="104" r="15" fill="none" stroke="#8C82B4" stroke-opacity=".34"/>
+          <path d="M209 203 l5.6 17.8 17.8 5.6 -17.8 5.6 -5.6 17.8 -5.6 -17.8 -17.8 -5.6 17.8 -5.6z" fill="#B08D4F" opacity=".9"/>
+          <g fill="#2A2523" opacity=".24">
+            <circle cx="188" cy="118" r="1.8"/><circle cx="356" cy="288" r="1.6"/>
+            <circle cx="272" cy="336" r="1.4"/><circle cx="140" cy="76" r="1.5"/>
+            <circle cx="60" cy="196" r="1.2"/><circle cx="372" cy="196" r="1.6"/>
+            <circle cx="238" cy="62" r="1.3"/><circle cx="86" cy="248" r="1.2"/>
+            <circle cx="300" cy="248" r="1.1"/><circle cx="176" cy="292" r="1.2"/>
+          </g>
+          <text x="96" y="370" text-anchor="middle" font-size="11" letter-spacing="2" fill="#6E665E" font-family="ui-monospace, monospace">3 MONTHS</text>
+          <text x="322" y="72" text-anchor="middle" font-size="11" letter-spacing="2" fill="#6E665E" font-family="ui-monospace, monospace">TWO CITIES</text>
+        </svg>
+      </div>
+    </div>
+
+    <dl class="home-facts">
+      <div><dt>认识</dt><dd>三个月</dd></div>
+      <div><dt>原本</dt><dd>两座城市</dd></div>
+      <div><dt>希望</dt><dd>很多年</dd></div>
+    </dl>
+
+    <section class="home-story" aria-labelledby="home-story-title">
+      <div class="section-head">
+        <h2 class="section-title" id="home-story-title">十个章节</h2>
+        <p class="section-sub">从相遇到心意，一段有顺序的故事。可以从头读，也可以直接跳到想看的那一章。</p>
+      </div>
+      <div class="chapter-chips" id="home-chapters">
+        <a class="chapter-chip" href="#/story/1"><span class="chapter-chip-no">01</span><span class="chapter-chip-title">相遇</span></a>
+        <a class="chapter-chip" href="#/story/2"><span class="chapter-chip-no">02</span><span class="chapter-chip-title">相处</span></a>
+        <a class="chapter-chip" href="#/story/3"><span class="chapter-chip-no">03</span><span class="chapter-chip-title">分享</span></a>
+        <a class="chapter-chip" href="#/story/4"><span class="chapter-chip-no">04</span><span class="chapter-chip-title">信任</span></a>
+        <a class="chapter-chip" href="#/story/5"><span class="chapter-chip-no">05</span><span class="chapter-chip-title">陪伴</span></a>
+        <a class="chapter-chip" href="#/story/6"><span class="chapter-chip-no">06</span><span class="chapter-chip-title">回忆</span></a>
+        <a class="chapter-chip" href="#/story/7"><span class="chapter-chip-no">07</span><span class="chapter-chip-title">默契</span></a>
+        <a class="chapter-chip" href="#/story/8"><span class="chapter-chip-no">08</span><span class="chapter-chip-title">距离</span></a>
+        <a class="chapter-chip" href="#/story/9"><span class="chapter-chip-no">09</span><span class="chapter-chip-title">未来</span></a>
+        <a class="chapter-chip" href="#/story/10"><span class="chapter-chip-no">10</span><span class="chapter-chip-title">心意</span></a>
+      </div>
+      <p class="home-story-link"><button class="btn btn--text" type="button" data-go="story">看完整的十个章节 →</button></p>
+    </section>
+
+    <section class="home-how" aria-labelledby="how-title">
+      <div class="section-head">
+        <h2 class="section-title" id="how-title">接下来会发生什么</h2>
+        <p class="section-sub">四步走完。不用注册，不用登录，答案也不会离开这台设备。</p>
+      </div>
+      <ol class="how-list">
+        <li class="how-item">
+          <span class="how-no">01</span>
+          <h3>读十个章节</h3>
+          <p>从相遇到心意，每一章都有具体内容。读不完也没关系，可以随时跳。</p>
+        </li>
+        <li class="how-item">
+          <span class="how-no">02</span>
+          <h3>回答 20 个问题</h3>
+          <p>十个方面，每个方面两题。不确定可以选「说不好」，它不会被算成 0 分。</p>
+        </li>
+        <li class="how-item">
+          <span class="how-no">03</span>
+          <h3>看一份透明的结果</h3>
+          <p>每个分数都能对上你刚才的每一道选择。</p>
+        </li>
+        <li class="how-item">
+          <span class="how-no">04</span>
+          <h3>读那封信，带走一张卡</h3>
+          <p>最后是一段原话，和一张可以存进相册的 PNG。</p>
+        </li>
+      </ol>
+    </section>
+
+    <p class="home-foot">这不是考试，也不是预言。只是一个把「我很珍惜」说得更认真一点的方式。</p>
+  </section>
+
+  <!-- ==================== 十个章节 ==================== -->
+  <section class="view" id="view-story" data-view="story" hidden>
+    <div class="story-shell" id="story-body"></div>
+  </section>
+
+  <!-- ==================== 测试 ==================== -->
+  <section class="view" id="view-test" data-view="test" hidden>
+    <div class="test-shell">
+
+      <div class="gate" id="test-gate" hidden></div>
+
+      <div id="test-main" hidden>
+        <div class="test-top">
+          <div class="test-meta">
+            <span class="mono test-count">Q <b id="q-index">01</b> <span class="dim-sep">/</span> 20</span>
+            <span class="q-dim" id="q-dim">相识缘分</span>
+          </div>
+          <div class="progress-track" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" aria-label="答题进度" id="progress-bar">
+            <div class="progress-fill" id="progress-fill"></div>
+          </div>
+          <div class="test-sub">
+            <p class="test-progress-note" id="progress-note">已答 0 / 20</p>
+            <p class="viewer-tag" id="viewer-tag"></p>
+            <button class="link-btn viewer-switch" type="button" id="switch-viewer">切换视角</button>
+          </div>
+        </div>
+
+        <div class="q-card" id="q-card">
+          <p class="q-kicker" id="q-kicker"></p>
+          <p class="q-view" id="q-view"></p>
+          <h2 class="q-title" id="q-title" tabindex="-1">题目</h2>
+          <p class="q-hint" id="q-hint"></p>
+          <div class="q-options" id="q-options" role="radiogroup" aria-labelledby="q-title"></div>
+        </div>
+
+        <div class="test-nav">
+          <button class="btn btn--ghost btn--sm" id="prev-btn" type="button">上一题</button>
+          <span class="test-note" id="test-note">选一个最接近的就好，没有标准答案</span>
+          <button class="btn btn--primary btn--sm" id="next-btn" type="button">下一题</button>
+        </div>
+
+        <p class="test-scope">这份测试记录的只是<b>填写者此刻的观察和感受</b>，不是对方的真实想法，也不是对这段关系的判决。答案保存在你这台设备的浏览器里，不会上传。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== 结果 ==================== -->
+  <section class="view" id="view-result" data-view="result" hidden>
+    <div class="view-head">
+      <p class="eyebrow">04 · 结果</p>
+      <h1 class="view-title">你刚才的选择，落在了这里</h1>
+      <p class="view-sub">下面每个数字都能追溯到具体的题目和选项。它不是考试分数，也不是对这段友情的判定。</p>
+    </div>
+
+    <div class="result-hero">
+      <p class="eyebrow">友情维系参考指数</p>
+      <div class="ring-wrap">
+        <svg class="ring" viewBox="0 0 200 200" aria-hidden="true">
+          <circle cx="100" cy="100" r="86" class="ring-track"/>
+          <circle cx="100" cy="100" r="86" class="ring-value" id="ring-value"/>
+        </svg>
+        <span class="ring-word" id="ring-word">—</span>
+      </div>
+
+      <div class="score-block">
+        <p class="score-num"><span id="score-value">—</span><em>/ 100</em></p>
+        <p class="score-label" id="score-label">—</p>
+        <p class="result-who" id="result-who"></p>
+        <div class="coverage">
+          <div class="coverage-head"><span>数据覆盖度</span><b id="coverage-value">0%</b></div>
+          <div class="coverage-track"><i id="coverage-fill"></i></div>
+          <p class="coverage-note" id="coverage-note"></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="warn-card" id="coverage-warning" hidden></div>
+
+    <div class="panel-grid">
+      <section class="panel panel--radar">
+        <div class="panel-head">
+          <h2 class="panel-title">十个方面的形状</h2>
+          <p class="panel-sub">越靠外表示你在这方面的回答越确定。</p>
+        </div>
+        <div class="radar-wrap">
+          <svg id="radar" viewBox="0 0 340 340" role="img" aria-label="十个方面的雷达图"></svg>
+        </div>
+        <p class="radar-note" id="radar-note"></p>
+      </section>
+
+      <section class="panel panel--dims">
+        <div class="panel-head">
+          <h2 class="panel-title">逐个方面</h2>
+          <p class="panel-sub">点开任意一项，可以看到它是哪两道题算出来的。</p>
+        </div>
+        <div class="dim-list" id="dim-list"></div>
+      </section>
+    </div>
+
+    <section class="panel">
+      <div class="panel-head">
+        <h2 class="panel-title">一份不着急下结论的读后记</h2>
+        <p class="panel-sub">下面这些话，是对着你刚才的答案说的，不是对这段友情的判决。</p>
+      </div>
+      <div id="report-body"></div>
+    </section>
+
+    <section class="panel">
+      <div class="panel-head">
+        <h2 class="panel-title">三种未来，三个方向</h2>
+        <p class="panel-sub">下面是三种假设下的场景描述，不是预测，也不含任何概率。</p>
+      </div>
+      <div class="scen-mini" id="scen-mini"></div>
+      <div class="year-chips" id="year-chips"></div>
+      <p class="panel-link"><button class="btn btn--text" type="button" data-go="futures">去看完整的时间轴 →</button></p>
+    </section>
+
+    <div class="result-actions">
+      <button class="btn btn--primary" type="button" data-go="futures">看看三种未来</button>
+      <button class="btn btn--ghost" type="button" data-go="letter">读那封信</button>
+      <button class="btn btn--ghost" type="button" data-go="card">做成纪念卡</button>
+    </div>
+    <div class="result-links">
+      <button class="btn btn--text" type="button" id="edit-answers">修改答案</button>
+      <button class="btn btn--text" type="button" id="restart-test">重新测试</button>
+    </div>
+
+    <div class="disclaimer">
+      <p><b>关于这份结果</b></p>
+      <p>它不是科学心理测验，没有经过量表验证，也不是判断友情价值的标准。它只做一件事：把填写者此刻的选择，用同一种口径算出来给你看。</p>
+      <p>它也只代表填写者一个人的视角。你无法从这里知道对方怎么想，除非对方自己填一遍。</p>
+    </div>
+  </section>
+
+  <!-- ==================== 未来 ==================== -->
+  <section class="view" id="view-futures" data-view="futures" hidden>
+    <div class="view-head">
+      <p class="eyebrow">05 · 情景</p>
+      <h1 class="view-title">如果继续走下去</h1>
+      <p class="view-sub">同一条起点，三种不同的走法。下面每一段都是基于假设写出来的场景，不是预测，也没有任何概率计算。</p>
+    </div>
+
+    <div class="scen-tabs" id="scen-tabs" role="tablist" aria-label="情景选择"></div>
+
+    <div class="scen-panel" id="scen-panel">
+      <div class="scen-panel-head">
+        <span class="scen-dot" id="scen-dot"></span>
+        <h2 id="scen-name">情景</h2>
+        <span class="scen-tagline" id="scen-tag"></span>
+      </div>
+      <p class="scen-summary" id="scen-summary"></p>
+      <ol class="timeline" id="timeline"></ol>
+      <div class="scen-assume">
+        <h3>这一段假设了什么</h3>
+        <ul id="scen-assumptions"></ul>
+      </div>
+    </div>
+
+    <div class="basis-card">
+      <h2 class="basis-title">哪些是你的答案，哪些是系统的设定</h2>
+      <div class="basis-grid">
+        <div class="basis-col basis-col--you">
+          <h3>来自你的回答</h3>
+          <p id="basis-you">—</p>
+          <p class="basis-note">只呈现与"未来"最相关的三个方面的实际得分，可回到结果页核对。</p>
+        </div>
+        <div class="basis-col basis-col--sys">
+          <h3>系统设定的假设</h3>
+          <p>三种情景的名称、假定条件、每一个时间点的文字，都是项目预先写好的固定内容。它们不是预测，不随你的得分变化，也不是由算法生成。</p>
+          <p class="basis-note">换句话说：这里没有"计算出来的未来"，只有三种被写下来的可能。</p>
+        </div>
+      </div>
+      <p class="basis-foot">未来不是算出来的。真正决定它往哪走的，是两个人之后的选择和行动。</p>
+    </div>
+
+    <div class="result-actions">
+      <button class="btn btn--primary" type="button" data-go="letter">读那封信</button>
+      <button class="btn btn--ghost" type="button" data-go="result">回到结果</button>
+      <button class="btn btn--ghost" type="button" data-go="card">做成纪念卡</button>
+    </div>
+  </section>
+
+  <!-- ==================== 寄语 ==================== -->
+  <section class="view" id="view-letter" data-view="letter" hidden>
+    <div class="view-head view-head--center">
+      <p class="eyebrow">06 · 专属寄语</p>
+      <h1 class="view-title">有些相遇，值得被认真记住。</h1>
+      <p class="view-sub">这一页的文字，是我自己写的，一个字都没有改。</p>
+    </div>
+
+    <div class="envelope-stage" id="envelope-stage">
+      <button class="envelope" id="envelope" type="button" aria-label="拆开信封，阅读寄语">
+        <span class="envelope-back"></span>
+        <span class="envelope-peek"></span>
+        <span class="envelope-front"></span>
+        <span class="envelope-flap"></span>
+        <span class="envelope-seal">✦</span>
+        <span class="envelope-hint">点一下，拆开</span>
+      </button>
+    </div>
+
+    <div class="letter-tabs" id="letter-tabs" role="tablist" aria-label="两封寄语" hidden>
+      <button class="letter-tab is-on" id="letter-tab-1" type="button" role="tab" aria-selected="true" aria-controls="letter-paper" data-letter="1">第一封 · 关于以后</button>
+      <button class="letter-tab" id="letter-tab-2" type="button" role="tab" aria-selected="false" aria-controls="letter-paper-2" data-letter="2" tabindex="-1">第二封 · 无话不谈的你</button>
+    </div>
+
+    <article class="letter-paper" id="letter-paper" role="tabpanel" aria-labelledby="letter-tab-1" hidden>
+      <header class="letter-head">
+        <p class="letter-to">致 张应钰</p>
+        <span class="letter-stamp" aria-hidden="true">✦</span>
+      </header>
+      <p class="letter-from">一份来自孙浩轩的友情纪念</p>
+      <div class="letter-body" id="letter-body"></div>
+      <footer class="letter-foot">
+        <span class="letter-rule" aria-hidden="true"></span>
+        <p class="letter-sign">写信的人：孙浩轩</p>
+      </footer>
+    </article>
+
+    <article class="letter-paper" id="letter-paper-2" role="tabpanel" aria-labelledby="letter-tab-2" hidden>
+      <header class="letter-head">
+        <p class="letter-to">致 张应钰</p>
+        <span class="letter-stamp" aria-hidden="true">✦</span>
+      </header>
+      <p class="letter-from">一份来自孙浩轩的友情纪念</p>
+      <h2 class="letter-title">写给已经无话不谈的你</h2>
+      <div class="letter-body" id="letter-body-2"></div>
+      <footer class="letter-foot">
+        <span class="letter-rule" aria-hidden="true"></span>
+        <p class="letter-sign">写信的人：孙浩轩</p>
+      </footer>
+    </article>
+
+    <div class="letter-actions" id="letter-actions" hidden>
+      <button class="btn btn--primary" type="button" id="next-letter">继续读第二封信</button>
+      <button class="btn btn--ghost" type="button" data-go="card">做成纪念卡</button>
+      <button class="btn btn--ghost" type="button" id="copy-letter">复制这封信</button>
+      <button class="btn btn--text" type="button" data-go="result">回到结果</button>
+    </div>
+    <p class="toast" id="toast" role="status" aria-live="polite"></p>
+  </section>
+
+  <!-- ==================== 纪念卡 ==================== -->
+  <section class="view" id="view-card" data-view="card" hidden>
+    <div class="view-head view-head--center">
+      <p class="eyebrow">07 · 纪念卡</p>
+      <h1 class="view-title">把它留下来</h1>
+      <p class="view-sub">一张真正生成出来的 PNG，不是截屏。可以存进相册，也可以在很多年以后再打开。</p>
+    </div>
+
+    <div class="card-stage" id="card-stage">
+      <div class="card-preview">
+        <canvas id="card-canvas" width="1080" height="1350" aria-label="友情纪念卡片预览"></canvas>
+      </div>
+    </div>
+
+    <div class="card-controls" id="card-controls">
+      <label class="date-field" for="card-date">
+        <span>卡片上的日期</span>
+        <input type="date" id="card-date">
+      </label>
+      <button class="btn btn--primary" type="button" id="download-png">下载 PNG 图片</button>
+      <button class="btn btn--ghost" type="button" id="save-fallback">在手机上保存这张图</button>
+    </div>
+
+    <p class="card-note">卡片尺寸 1080 × 1350。上面只有名字、日期和一句话，不印分数，也不包含任何一道题的答案。</p>
+
+    <div class="card-fallback" id="card-fallback" hidden>
+      <p>下面这张图可以直接<b>长按</b>（手机）或<b>右键另存为</b>（电脑）保存：</p>
+      <img id="card-image" alt="友情纪念卡片，可长按或右键保存">
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-foot">
+  <p class="foot-title">《我们能做多久的好朋友？——一场关于友情、相遇、距离与未来的计算》</p>
+  <p class="foot-meta">一份由孙浩轩送给张应钰的友情纪念 · 纯静态页面 · 没有账号 · 答案不出这台设备</p>
+  <button class="link-btn" type="button" id="clear-data">清除本机保存的数据</button>
+</footer>
+
+<noscript>
+  <div class="noscript">这个页面需要 JavaScript 才能完成测试和计算，请在浏览器设置里打开后再试。</div>
+</noscript>
+
+<script src="./assets/js/data.js"></script>
+<script src="./assets/js/engine.js"></script>
+<script src="./assets/js/card.js"></script>
+<script src="./assets/js/app.js"></script>
+</body>
+</html>
